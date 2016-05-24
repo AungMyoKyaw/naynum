@@ -4,7 +4,6 @@ var h1=document.getElementsByTagName('h1');
 var text=document.getElementById('textbox')
 text.onkeyup=function(){
 	if(this.value!==""){
-		console.log(this.value);
 		result.innerHTML=nayNum(this.value.toString());
 		textval.innerHTML=numFormat(result.innerHTML);
 	} else {
