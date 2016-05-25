@@ -10,9 +10,7 @@ $font-family:sans-serif;
 	font-size:$font-size;
 }
 .content{
-	@include bp(large-only){
-		@include centerer;
-	}
+	@include centerer;
 }
 a{
 	text-decoration:none;
@@ -29,12 +27,16 @@ p{
 }
 input[type=text]{
 	@extend %border-style;
-	width:15em;
 	text-align:center;
 	@include center-block;
+	@include bp(small-only){
+		width:1.3em*15;
+	}
+	@include bp(medium-only){
+		width:1.3em*20;
+	}
 	@include bp(large-only){
 		width:30em;
-		text-align:center;
 	}
 	&:focus{
 		outline:none;
