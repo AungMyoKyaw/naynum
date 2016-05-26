@@ -29,15 +29,13 @@ input[type=text]{
 	@extend %border-style;
 	text-align:center;
 	@include center-block;
-	@include bp(small-only){
-		width:1.3em*15;
-	}
-	@include bp(medium-only){
-		width:1.3em*20;
-	}
-	@include bp(large-only){
+	@include bp(large){
 		width:30em;
 	}
+		@include bp(small){
+		width:100%
+	}
+
 	&:focus{
 		outline:none;
 	}
